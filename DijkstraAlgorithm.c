@@ -32,8 +32,8 @@ void dijkstra(int matrix[][10], int source, int destination, int n){
         distance[i] = INT_MAX;
         visited[i] = false;
     }
-    distance[0] = 0;
-    predecessor[0] = -1;
+    distance[source] = 0;
+    predecessor[source] = -1;
     for(i=0; i<n-1 && !visited[destination]; i++){
         min_index = findMinDistanceIndex(visited, distance, n);
         visited[min_index] = true;
